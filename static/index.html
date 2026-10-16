@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Management</h1>
+        <a href="/docs" target="_blank">API Docs</a>
+    </header>
+
+    <main>
+
+        <section class="card">
+            <h2>All Students</h2>
+
+            <div class="filters">
+                <input type="text" id="searchInput" placeholder="Search by name, email or ID">
+                <input type="text" id="courseInput" placeholder="Filter by course">
+                <button id="searchBtn">Search</button>
+            </div>
+
+            <div class="table-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>DOB</th>
+                            <th>Age</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Course</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTable"></tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button id="prevBtn">Previous</button>
+                <span id="pageInfo"></span>
+                <button id="nextBtn">Next</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 id="formTitle">Add Student</h2>
+
+            <form id="studentForm">
+                <input type="text" id="name" placeholder="Full name *" required>
+                <input type="date" id="dob" required>
+                <input type="email" id="email" placeholder="Email">
+                <input type="text" id="phone" placeholder="Phone (e.g. +919876543210)">
+                <input type="text" id="course" placeholder="Course">
+                <input type="text" id="address" placeholder="Address">
+                <input type="date" id="enrollmentDate">
+
+                <div>
+                    <button type="submit">Save</button>
+                    <button type="button" id="clearBtn" class="secondary">Clear</button>
+                </div>
+            </form>
+
+            <p id="message"></p>
+        </section>
+
+        <section class="card">
+            <h2>Ask AI (Ollama)</h2>
+
+            <div class="filters">
+                <input type="text" id="questionInput" placeholder="e.g. How many students are there?">
+                <button id="askBtn">Ask</button>
+            </div>
+
+            <p id="answer"></p>
+        </section>
+
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

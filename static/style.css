@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: #111827;
+    border-bottom: 4px solid #0ea5e9;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 22px;
+    color: white;
+}
+
+header a {
+    color: #0ea5e9;
+    text-decoration: none;
+}
+
+main {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #0284c7;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0ea5e9;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button.secondary {
+    background-color: #6b7280;
+}
+
+button.delete {
+    background-color: #dc2626;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.filters input {
+    flex: 1;
+    min-width: 180px;
+}
+
+.table-box {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    white-space: nowrap;
+}
+
+th {
+    background-color: #f1f5f9;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+#message.error {
+    color: #dc2626;
+}
+
+#message.success {
+    color: #16a34a;
+}
+
+#answer {
+    white-space: pre-wrap;
+    background-color: #f1f5f9;
+    padding: 10px;
+    border-radius: 4px;
+}
